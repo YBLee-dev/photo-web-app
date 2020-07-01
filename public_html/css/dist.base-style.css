@@ -1,0 +1,477 @@
+.green {
+  color: #3cc676; }
+
+.orange {
+  color: #ffaf1c; }
+
+.brown {
+  color: #622a14; }
+
+.gray {
+  color: #6e7870; }
+
+.blue {
+  color: #4385e9; }
+
+.red {
+  color: #ed3f27; }
+
+.bold {
+  font-weight: 600; }
+
+/* Adding fonts
+ type fonts .eot, .woff, .ttf , .svg
+ variables:
+ $font-file - name files font
+ $font-name - default = $font-file
+ $font-style - style for fonts
+ $font-weight - font weight*/
+/*@include add-font('../fonts/Poppins-Thin', 'Poppins', normal, 100);
+@include add-font('../fonts/Poppins-ExtraLight', 'Poppins', normal, 200);
+@include add-font('../fonts/Poppins-Light', 'Poppins', normal, 300);
+@include add-font('../fonts/Poppins-Regular', 'Poppins', normal, 400);
+@include add-font('../fonts/Poppins-Medium', 'Poppins', normal, 500);
+@include add-font('../fonts/Poppins-SemiBold', 'Poppins', normal, 600);
+@include add-font('../fonts/Poppins-Bold', 'Poppins', normal, 700);
+@include add-font('../fonts/Poppins-ExtraBold', 'Poppins', normal, 800);
+@include add-font('../fonts/Poppins-Black', 'Poppins', normal, 900);*/
+@font-face {
+  font-family: "Amatic SC";
+  src: url("../fonts/Amaticscregular.eot");
+  src: url("../fonts/Amaticscregular.eot?#iefix") format("embedded-opentype"), url("../fonts/Amaticscregular.svg") format("svg"), url("../fonts/Amaticscregular.woff") format("woff"), url("../fonts/Amaticscregular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: "Amatic SC";
+  src: url("../fonts/Amaticscbold.eot");
+  src: url("../fonts/Amaticscbold.eot?#iefix") format("embedded-opentype"), url("../fonts/Amaticscbold.svg") format("svg"), url("../fonts/Amaticscbold.woff") format("woff"), url("../fonts/Amaticscbold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosansitalic.eot");
+  src: url("../fonts/notosansitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/notosansitalic.svg") format("svg"), url("../fonts/notosansitalic.woff") format("woff"), url("../fonts/notosansitalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosans.eot");
+  src: url("../fonts/notosans.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans.svg") format("svg"), url("../fonts/notosans.woff") format("woff"), url("../fonts/notosans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosansbolditalic.eot");
+  src: url("../fonts/notosansbolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/notosansbolditalic.svg") format("svg"), url("../fonts/notosansbolditalic.woff") format("woff"), url("../fonts/notosansbolditalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosansbold.eot");
+  src: url("../fonts/notosansbold.eot?#iefix") format("embedded-opentype"), url("../fonts/notosansbold.svg") format("svg"), url("../fonts/notosansbold.woff") format("woff"), url("../fonts/notosansbold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility; }
+/**
+ * Meyer reset
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* @import "audi_pack/audi_pack"; */
+img {
+  display: block;
+  max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s; }
+
+.clr:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.__hidden {
+  display: none; }
+
+.tel {
+  pointer-events: none;
+  cursor: default; }
+
+.__disable {
+  pointer-events: none;
+  cursor: default;
+  opacity: .5; }
+
+.center-ic {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto; }
+
+.text-right {
+  text-align: right; }
+
+.txt-center {
+  text-align: center; }
+
+.__no-pr {
+  padding-right: 0; }
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter; }
+  ol li {
+    counter-increment: my-awesome-counter;
+    line-height: 1.4;
+    margin-bottom: 20px; }
+    ol li:before {
+      content: counter(my-awesome-counter) ") ";
+      padding-right: 10px; }
+    ol li:last-of-type {
+      margin-bottom: 0; }
+
+/* INPUTS */
+input {
+  display: inline-block;
+  width: 100%;
+  outline: 0;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  font-family: "Noto Sans", Arial, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6e7870;
+  border: 1px solid #6e7870;
+  padding: 12px 20px;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  background: #fff;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  input:focus {
+    background: #fff; }
+  input::-webkit-input-placeholder {
+    font-size: 12px;
+    font-family: "Noto Sans", Arial, Geneva, sans-serif;
+    color: #6e7870;
+    text-transform: uppercase; }
+  input::-moz-placeholder {
+    font-size: 12px;
+    font-family: "Noto Sans", Arial, Geneva, sans-serif;
+    color: #6e7870;
+    text-transform: uppercase; }
+  input:-moz-placeholder {
+    font-size: 12px;
+    font-family: "Noto Sans", Arial, Geneva, sans-serif;
+    color: #6e7870;
+    text-transform: uppercase; }
+  input:-ms-input-placeholder {
+    font-size: 12px;
+    font-family: "Noto Sans", Arial, Geneva, sans-serif;
+    color: #6e7870;
+    text-transform: uppercase; }
+
+label {
+  display: block;
+  cursor: pointer;
+  color: #6e7870;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Noto Sans", Arial, Geneva, sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px; }
+
+.error-lbl {
+  color: #ed3f27;
+  font-size: 12px;
+  padding: 5px 0 0; }
+
+.error {
+  border: 1px solid #CF1919; }
+
+.form-status-hidden {
+  visibility: hidden;
+  padding-top: 14px; }
+
+.form-status {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
+  padding-top: 0;
+  margin-bottom: 10px; }
+  .form-status.with_error {
+    color: #CF1919; }
+
+.wrap-inp {
+  width: 100%;
+  margin-bottom: 30px; }
+
+.wrap-sub {
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.btn-sub, .btn-sub-warning {
+  color: #fff;
+  outline: 0;
+  display: block;
+  padding: 7px 10px 8px;
+  font-size: 24px;
+  font-family: "Amatic SC", Arial, Geneva, sans-serif;
+  font-weight: 600;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background: #ed3f27;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s; }
+  .btn-sub:hover, .btn-sub-warning:hover, .btn-sub:focus, .btn-sub-warning:focus, .btn-sub:active, .btn-sub-warning:active {
+    outline: 0;
+    cursor: pointer;
+    background: #ff452b; }
+
+.btn-sub-warning {
+  background: #ffaf1c;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s; }
+  .btn-sub-warning:hover, .btn-sub-warning:focus, .btn-sub-warning:active {
+    outline: 0;
+    cursor: pointer;
+    background: #ffaf1c; }
+
+@media screen and (max-width: 900px) {
+  input {
+    padding: 7px 15px; }
+
+  .wrap-inp {
+    margin-bottom: 20px; } }
+/* END INPUTS */
+/* BUTTONS */
+.btn-gray {
+  outline: none;
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+  height: 44px;
+  line-height: 44px;
+  background: #6e7870;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Amatic SC", Arial, Geneva, sans-serif;
+  font-weight: 600;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  max-width: 200px;
+  width: 100%; }
+  .btn-gray:hover {
+    background: #6e7870;
+    text-decoration: none; }
+  .btn-gray-ic {
+    display: inline-block;
+    background-image: url("/../img/arrow-back.png");
+    width: 31px;
+    height: 17px;
+    margin-right: 15px; }
+
+/* END BUTTONS */
+/* TITLES */
+/* END TITLES */
+@media screen and (max-width: 900px) {
+  .tel {
+    pointer-events: auto;
+    cursor: pointer; } }
+@media screen and (max-width: 680px) {
+  ol li {
+    line-height: 1.2;
+    margin-bottom: 5px; } }
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: "Noto Sans", Arial, Geneva, sans-serif;
+  color: #625550;
+  font-weight: 400;
+  background: #fff; }
+
+.container {
+  max-width: 1510px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* align center, add default padding*/
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.33333%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+/* footer to bottom of page */
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%; }
+
+.cnt-wrap {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+     -moz-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: block; }
+
+.page-index .wrapper,
+.page-order-card .wrapper {
+  background-image: url("../img/phone.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: -moz-calc(100vh - 141px);
+  min-height: calc(100vh - 141px); }
+.page-index .footer,
+.page-order-card .footer {
+  margin-top: 20px; }
+
+.page-order-card .wrapper {
+  min-height: -moz-calc(100vh - 87px);
+  min-height: calc(100vh - 87px); }
+
+a {
+  outline: 0;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s; }
+
+/* end footer to bottom of page */
+@media screen and (max-width: 900px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .page-index .wrapper,
+  .page-order-card .wrapper {
+    min-height: 100%; } }
+.header {
+  background: #fff; }
+  .header-logo-lnk {
+    display: block;
+    max-width: 481px;
+    width: 100%;
+    margin: 0 auto; }
+  .header-b {
+    margin-bottom: 5px; }
+    .header-b-lnk {
+      display: block;
+      max-width: 290px;
+      width: 100%; }
+
+@media screen and (max-width: 900px) {
+  .header-logo-lnk {
+    max-width: 310px; } }

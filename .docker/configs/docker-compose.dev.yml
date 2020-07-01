@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  #################################
+  #  Main app container           #
+  #################################
+  main-service:
+    ports:
+    - "80:80"
+    - "443:443"
+    - "20-21:20-21"
+    - "21100-21110:21100-21110"
+
+  #################################
+  #  Database container           #
+  #################################
+  mysql:
+      image: mysql:5.7
+      container_name: "${APP_NAME}_mysql"
+      ports:
+        - "9093:3306"
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: homestead
+        MYSQL_USER: homestead
+        MYSQL_PASSWORD: secret
+      volumes:
+        -  "../../.service-main/.mysql:/var/lib/mysql"

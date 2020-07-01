@@ -1,0 +1,320 @@
+.product{
+  &-row{
+    @include make-row();
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &-col{
+    @include make-col(2.4);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    &.__L{
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  &-card{
+    &-t{
+      padding: 15px 20px;
+      background: $c-inverse;
+      border: 1px solid $c-border-inverse;
+    }
+    &-img{
+      max-width: 100%;
+      width: 100%;
+      //object-fit: contain;
+    }
+    &-size{
+      padding: 20px 0;
+      font-size: 17px;
+    }
+    &-b{
+      padding: 15px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &-btn{
+      @extend .order-price-download;
+    }
+  }
+}
+.order{
+  &-product{
+    &:nth-of-type(2n){
+      background: $c-inverse;
+    }
+  }
+  &-price{
+    &-ttl,
+    &-subttl,
+    &-name,
+    &-count,
+    &-total{
+      width: 100%;
+    }
+    &-ttl{
+      font-size: 24px;
+      font-weight: 600;
+      &.__L{
+        font-size: 60px;
+      }
+      &-arrow{
+        display: inline-block;
+        background-image: url("/img/arow-ttl.png");
+        width: 25px;
+        height: 14px;
+      }
+    }
+    &-subttl{
+      font-size: 24px;
+      font-weight: 600;
+      padding: 10px 0;
+      &.__L{
+        font-size: 36px;
+      }
+    }
+    &-name{
+      font-size: 24px;
+      transition: transform 2s;
+      cursor: pointer;
+      &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        background-image: url("/img/arrow2.png");
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &.__active{
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-total{
+      padding-bottom: 15px;
+    }
+    &-download{
+      display: inline-block;
+      position: relative;
+      color: $c-btn;
+      padding-left: 25px;
+      font-size: 24px;
+      font-family: $ttl-font;
+      font-weight: 600;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("/img/arrow-btn.png");
+        width: 17px;
+        height: 23px;
+      }
+    }
+    &-arrow{
+      position: absolute;
+      top: 15px;
+      right: 0;
+      background-image: url("/../img/arrow-togle-collapse.png");
+      width: 19px;
+      height: 12px;
+      //transform: rotate(180deg);
+      cursor: pointer;
+      &.__active{
+        background-image: url("/img/arrow-togle.png");
+      }
+    }
+    &-tbl{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      &-row{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        font-family: $ttl-font;
+        &-i{
+          display: flex;
+          flex-flow: row;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          flex-basis: 0;
+          padding: 10px 15px 10px 0;
+          word-break: break-word;
+          &.__digital-product{
+            display: block;
+            max-width: 240px;
+          }
+          .product-card-btn{
+            margin: 5px 0;
+          }
+          &.__relative{
+            position: relative;
+            padding-right: 50px;
+          }
+          &.__no-pr{
+            padding-right: 0;
+          }
+          &.__pr{
+            padding-right: 75px;
+          }
+        }
+      }
+    }
+    &-b{
+      padding: 10px 0;
+      background: $c-border-inverse;
+    }
+    &-comment{
+      max-width: 100%;
+      width: 100%;
+      font-family: $base-font;
+    }
+  }
+  &-preview{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-ttl{
+      @extend .order-price-subttl.__L;
+      font-family: $ttl-font;
+      font-weight: 600;
+      padding-right: 10px;
+    }
+    &-cnt{
+      display: flex;
+    }
+    &-img{
+      max-width: 50px;
+      margin-right: 5px;
+      margin-top: 5px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+}
+.__mobile{
+  display: none;
+}
+@media screen and (max-width: 1024px){
+  .product{
+    &-col{
+      @include make-col(3);
+      margin-bottom: 15px;
+    }
+  }
+  .order{
+    &-price{
+      &-tbl{
+        &-row{
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .product {
+    &-row{
+      margin: 0 -5px;
+    }
+    &-col {
+      @include make-col(4);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .order-price-ttl{
+    &.__middle{
+      font-size: 18px;
+      color: $c-mob!important;
+    }
+  }
+  .__desktop-md{
+    display: none;
+  }
+  .product {
+    &-col {
+      @include make-col(6);
+    }
+  }
+  .order-price-tbl-row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-i{
+      flex-grow: 0;
+      flex-basis: unset;
+      align-items: center;
+      justify-content: space-between;
+      /*max-width: 100px;
+      width: 100%;*/
+      padding-right: 0;
+      &:first-of-type{
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        padding-right: 21px;
+        justify-content: flex-start;
+        .order-price{
+          &-download{
+            margin-top: 5px;
+          }
+          &-ttl{
+            width: auto;
+            margin-right: 4%;
+          }
+          &-subttl{
+            width: auto;
+            padding: 0;
+          }
+          &-arrow{
+            //position: static;
+          }
+        }
+      }
+
+      &.__digital-product-image{
+        justify-content: flex-start;
+      }
+      &.__relative{
+        padding-right: 0;
+      }
+      .text-right {
+        text-align: left;
+      }
+      &.__mob-i{
+        flex-basis: 0;
+      }
+      &.__mob-price{
+        flex-grow: 1;
+        align-self: baseline;
+        .text-right{
+          text-align: center;
+        }
+      }
+    }
+  }
+  .__desktop{
+    display: none;
+  }
+  .__mobile{
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product {
+    &-col {
+      @include make-col(12);
+      max-width: 220px;
+      margin: 0 auto 5px;
+    }
+  }
+}

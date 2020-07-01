@@ -1,0 +1,19 @@
+.popup{
+  max-width: 600px;
+  padding: 50px 60px 15px;
+  border-radius: 5px;
+  margin: 1.75rem auto 0;
+  background-color: $c-inverse;
+  position: relative;
+  &-btn-close{
+    position: absolute;
+    background-image: url("/../img/close.png");
+    width: 15px;
+    height: 17px;
+    top: 20px;
+    right: 20px;
+  }
+  &-b{
+    padding: 15px 0;
+  }
+}

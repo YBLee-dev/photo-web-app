@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Import scripts
+. ./.scripts/core/utils.sh
+. ./.scripts/core/adddomain.sh
+. ./.scripts/core/env_processing.sh
+. ./.scripts/install_script.sh
+. ./.scripts/initial_script.sh
+. ./.scripts/sync_script.sh
+. ./.scripts/main.sh

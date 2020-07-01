@@ -1,0 +1,16 @@
+#js_magic-popup-bg{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  opacity: .6;
+  top: 0;
+  z-index: 1000;
+}
+
+.js_magic-popup{
+  position: fixed;
+  top: 25%;
+  z-index: 1001;
+  width: 100%;
+}

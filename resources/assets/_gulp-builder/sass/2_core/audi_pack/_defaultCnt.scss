@@ -1,0 +1,75 @@
+.default-cnt-audi{
+	font-family: $ext-font;
+	font-size: 14px;
+	div{
+		margin-bottom: 20px;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		font-size: 12px;
+		letter-spacing: .02em;
+		padding-left: 10px;
+		position: relative;
+		&:before{
+			content: '-';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+		}
+	}
+	ol{
+		margin-left: 10px;
+		list-style-type: decimal;
+	}
+	h1{
+	   font-weight: bold;
+	}
+	h1,h2{
+	   font-size: 24px;
+	   margin-bottom: 20px;
+	   line-height: 25px;
+	}
+	h3,h4,h5{
+		font-size: 20px;
+		line-height: 21px;
+	}
+	p{
+		color: $color-font-txt;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+
+	table{
+		margin: 10px 0;
+		max-width: 100%;
+		width: auto !important;
+	}
+	td {
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		padding: 10px 5px;
+		vertical-align: middle;
+	}
+	img {
+		max-width: 100%;
+	}
+	strong,
+	b{
+		font-weight: bold;
+	} 
+	a{
+		color: inherit;
+		text-decoration: underline;  
+		&:hover{
+			text-decoration: none;
+		}
+		&:focus{
+			outline: none;
+		}
+
+	}
+}

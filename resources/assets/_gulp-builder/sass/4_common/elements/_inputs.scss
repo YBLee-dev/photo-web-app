@@ -1,0 +1,126 @@
+input{
+  display: inline-block;
+  width: 100%;
+  outline: 0;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  font-family: $base-font;
+  font-weight: 400;
+  font-size: 14px;
+  color: $c-txt;
+  border: $border;
+  padding: 12px 20px;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  background: $c-inverse;
+  &:focus{
+    background: $c-inverse;
+  }
+  &::-webkit-input-placeholder {
+    font-size: 12px;
+    font-family: $base-font;
+    color: $c-txt;
+    text-transform: uppercase;
+  }
+  &::-moz-placeholder{
+    font-size: 12px;
+    font-family: $base-font;
+    color: $c-txt;
+    text-transform: uppercase;
+  }/* Firefox 19+ */
+  &:-moz-placeholder{
+    font-size: 12px;
+    font-family: $base-font;
+    color: $c-txt;
+    text-transform: uppercase;
+  }/* Firefox 18- */
+  &:-ms-input-placeholder{
+    font-size: 12px;
+    font-family: $base-font;
+    color: $c-txt;
+    text-transform: uppercase;
+  }
+}
+label{
+  display: block;
+  cursor: pointer;
+  color: $c-txt;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: $base-font;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.error-lbl{
+  color: $c-primary;
+  font-size: 12px;
+  padding: 5px 0 0;
+}
+.error{
+  border: 1px solid $c-error;
+}
+.form-status-hidden {
+  visibility: hidden;
+  padding-top: 14px;
+}
+.form-status{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
+  padding-top: 0;
+  margin-bottom: 10px;
+  &.with_error{
+    color: $c-error;
+  }
+}
+.wrap-inp{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.wrap-sub{
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.btn-sub{
+  color: $c-inverse;
+  outline: 0;
+  display: block;
+  padding: 7px 10px 8px;
+  font-size: 24px;
+  font-family: $ttl-font;
+  font-weight: 600;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background: $c-primary;
+  transition: all .3s;
+  &:hover,
+  &:focus,
+  &:active{
+    outline: 0;
+    cursor: pointer;
+    background: $c-primary-h;
+  }
+}
+.btn-sub-warning{
+  @extend .btn-sub;
+  background: $c-orange;
+  transition: all .3s;
+  &:hover,
+  &:focus,
+  &:active{
+    outline: 0;
+    cursor: pointer;
+    background: $c-orange;
+  }
+}
+@media screen and (max-width: 900px){
+  input{
+    padding: 7px 15px;
+  }
+  .wrap-inp {
+    margin-bottom: 20px;
+  }
+}

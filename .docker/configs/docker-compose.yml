@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  #################################
+  #  Main app container           #
+  #################################
+  main-service:
+    build:
+      context: ../../
+      dockerfile: .service-main/Dockerfile
+    environment:
+      app_name: ${APP_NAME}
+    image: "main-service:${APP_NAME}"
+    container_name: "${APP_NAME}_main-service"
+    volumes:
+      - "../../:/srv/app"
+      - "~/.composer:/root/.composer"
+      - "../../.ftp-service/vsftpd.conf:/etc/vsftpd.conf"
+      - "../../.ftp-service/vsftpd.userlist:/etc/vsftpd.userlist"
+      - "../../.service-main/.home:/home"
+      - "../../.service-main/.apache/sites-available:/etc/apache2/sites-available"
+      - "../../.service-main/.supervisor:/etc/supervisor/conf.d"
+      - "../../.service-main/.letsencrypt:/etc/letsencrypt"
+      - "../../.service-main/.ssl:/srv/ssl"
+      - "../../.service-main/.lib-letsencrypt/:/var/lib/letsencrypt"
+      - "../../.service-main/.php/php.user.ini:/usr/local/etc/php/conf.d/php.user.ini"
+    working_dir: "/srv/app"

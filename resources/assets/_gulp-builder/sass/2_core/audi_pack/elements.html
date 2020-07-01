@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base elements</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/ie.css')}}">
+
+	<![endif]-->
+	<style>
+
+		code{
+		    font-family: monospace;
+		}
+		b{
+		    font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">	
+		<br>
+		<h1> Базовые элементы для Audi</h1>
+		<br>
+		<hr>
+		<p>Перед началом работы нужно:</p>
+		<ul>
+			<li> - переместить нужные шрифты из папки '/resources/sass/core/audi_pack/fonts'</li>
+			<li> - в файле _configs.scss необходимо раскоментировать подключение шрифтов и нужные переменые для них </li>
+			<li> - в файле _core.scss нужно раскоментировать подключение одной из библиотек</li>
+			<li> - не нужные шрифты удаляем</li>
+			<li> - запускаем gulp</li>
+		</ul>
+	
+		<br>
+		<hr>
+		<br> 	
+		<h2>Кнопки</h2>
+		<br>
+		<a href='#' class="btn">button</a> <span> - стандартная кнопка c классом .btn, для применения на сайте используем: <b>@extend .btn</b></span>
+		<br>
+		<br>
+		<div class="default-cnt-audi">
+			<ul>
+				<li>Кнопка содержит стили для сосотояний <b>:hover, :active, :focus</b>;</li>
+				<li>Шрифт <b>AudiExtended</b></li>
+				<li>выравнивание по центру</li>
+				<li>Стандартные падинги <b>10px</b></li>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<a href="#" class="btn-dec">button</a><span> - кнопка серого цвета c классом <b>.btn-dec</b>, наследует все стили класса .btn; для применения на сайте используем: <code>@extend .btn-dec;</code></span>
+		<br>
+		<br>
+		<a href="#" class="btn-inverse">button</a><span> - кнопка красного цвета c классом <b>.btn-inverse</b>, наследует все стили класса .btn; для применения на сайте используем: <code>@extend .btn-inverse;</code></span>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<a href='#' class="btn with-ic-inline">button</a> <span> - кнопка с инлайновой иконкой c классом <b>.with-ic-inline</b>, для применения на сайте используем: <code>@extend .btn;<br>
+		@extend .with-ic-inline;
+		</code></span>
+		<p>Саму иконку вставляем в псевдоэлемент <b>:after</b></p>
+		<code>&:after{<br>
+			@extend .s-icon-name; <br>
+		}</code>
+
+		<br>
+		<br>
+		<a href="#" class="btn-dec"><span class="btn-ic"></span>button</a><span> - кнопка содержит иконку с классом <b>.btn-ic</b>, спозиционированую абсолютом справа. Для блока с иконкой задаем:</span> <br>
+		<code>@extend .btn-ic;<br>
+		@extend .s-icon-name;
+		</code>
+		<br><br>
+		<p>а для родительского элемента задаем:</p>
+		<code>
+			position:relative;<br>
+			padding-right: ..px;
+		</code>
+		<br>
+		<br>
+		<br>
+		<h2>Формы</h2>
+		<br>	
+		<p>Все input имеют обертку и этой обертке задается ширина и выравнивание относительно других элементов</p>
+		<div class="wrap-inp">
+			<label for="name">Имя</label>
+			<input type="text" name="name" id="name" required="reguired">
+		</div>
+		<br>
+		<br> 
+		<div class="wrap-inp">
+			<input type="email" id="email" class="error">
+			<label for="email" class="error-lbl">Неправильный email</label>
+		</div>
+		<br>
+		<br> 
+		<h2>Input с иконкой</h2>
+		<br>
+		<div class="wrap-inp inp-with-ic">
+            <input type="text" name="name" id="name-with-ic" placeholder="Ваше имя">
+            <label for="name-with-ic" class="inp-with-ic-lbl">
+                <i class="inp-ic inp-name"></i>
+            </label>
+        </div>
+        <p>Иконка расположена абсолютом в <b>label.inp-with-ic-lbl</b> имеет класс<b>.inp-ic</b></p>
+		<p> Обертке задаем класс .inp-with-ic</p>
+		<p>Иконка наследует следующие классы</p>
+		<code>{<br>
+			@extend	.inp-ic;<br>
+			@extend .s-icon-name;<br>
+		}</code>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div class="wrap-checkbox">
+            <input type="checkbox" name="credit_info" id="credit_info" checked="checked">
+            <label for="credit_info"><i class="checked-ic"></i>Узнать о покупке в кредит</label>
+        </div>
+        <p>Для чекбокса класс обертки <b>.wrap-checkbox</b></p>
+        <p>Необходимо задать иконку для активного чекбокса</p>
+        <code>
+        	input:checked+label>.checked-ic:before{<br>
+				@extend: .s-checkbox-ic;<br>
+		}
+        </code>
+        <br>
+		<br> 
+		<hr>
+		<br>
+		<br>
+
+		<h2>Текст из админки</h2>
+		<div class="default-cnt-audi">
+			<h1>заголовок h1</h1>
+			<h2>заголовок h2</h2>
+			<h3>заголовок h3</h3>
+			<h4>заголовок h4</h4>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem excepturi sint placeat vel porro, saepe, ratione sunt natus quod rem, <b>error ipsum ipsa</b> eius voluptatibus!</p>
+					<a href="#">Сылка</a>
+					<p>Lorem ipsum dolor sit amet, <a href="#">Сылка</a> consectetur adipisicing elit. Autem excepturi sint placeat vel porro, saepe, ratione sunt natus quod rem, <b>error ipsum ipsa eius voluptatibus!</b></p>
+				</div>
+			<h4>Список:</h4>
+			<ul>
+				<li>Заказ запчастей</li>
+				<li>Стандарты Audi Top Service</li>
+				<li>Сервисное обслуживание в Ауди Центре Варшавка</li>
+				<li>Каталог Audi collection</li>
+			</ul>
+
+			<h3>Таблица:</h3>
+			<table>
+			   <tbody>
+			    <tr>
+			     <td>Ячейка 1</td>
+			     <td>Ячейка 2</td> 
+			    </tr>
+			    <tr>
+			     <td>Ячейка 1</td>
+			     <td>Ячейка 2</td> 
+			    </tr>  
+			   </tbody>
+			</table> 
+		</div>
+		<br>
+		<br> 
+	</div>
+
+</body>
+</html>

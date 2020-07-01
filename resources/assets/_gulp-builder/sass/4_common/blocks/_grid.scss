@@ -1,0 +1,85 @@
+//Bootstarp grid
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import '../../../node_modules/bootstrap/scss/_mixins.scss';
+@import '../../../node_modules/bootstrap/scss/_grid.scss';
+
+*{
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+  line-height: 1;
+  font-family: $base-font;
+  color: $c-base;
+  font-weight: 400;
+  background: $c-inverse;
+}
+
+.container{
+  max-width: $width-container + ($padding-container * 2);
+  @include make-container(); /* align center, add default padding*/
+  padding-left: $padding-container;
+  padding-right: $padding-container;
+}
+
+.col{
+  @include make-col-ready();
+  @include make-col(4);
+
+}
+.row{
+  @include make-row();
+}
+
+/* footer to bottom of page */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.cnt-wrap {
+  position: relative;
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+  display: block;
+}
+
+.page-index,
+.page-order-card{
+  .wrapper{
+    background-image: url("../img/phone.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 141px);
+  }
+  .footer{
+    margin-top: 20px;
+  }
+}
+.page-order-card{
+  .wrapper {
+    min-height: calc(100vh - 87px);
+  }
+}
+
+a {
+  outline: 0;
+  transition: all .3s;
+}
+/* end footer to bottom of page */
+@media screen and (max-width: 900px){
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .page-index,
+  .page-order-card{
+    .wrapper {
+      min-height: 100%;
+    }
+  }
+}

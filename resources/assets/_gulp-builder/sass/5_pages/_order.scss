@@ -1,0 +1,351 @@
+.order{
+  background: $c-bg;
+  padding-top: 15px;
+  margin-bottom: 35px;
+  &-loading{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    .form-loading{
+      left: 0;
+      margin-left: 0;
+      width: 1.5em;
+      height: 1.5em;
+      top: 10px;
+      border-width: 2px;
+    }
+  }
+  &-download-wrap{
+    padding-bottom: 15px;
+  }
+  &-message{
+    padding: 10px 40px;
+    margin-bottom: 10px;
+    color: $c-inverse;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    &.__success{
+      background: $c-success;
+    }
+    &.__error{
+      background: $c-primary;
+    }
+    &.__add-btn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px 5px 40px;
+      .form-status{
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+    &-link{
+      display: inline-block;
+      width: auto;
+    }
+  }
+  &-gift-form{
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+  &-cnt{
+    &-ttl{
+      font-family: $ttl-font;
+      font-weight: 600;
+      font-size: 60px;
+      text-transform: uppercase;
+      color: $c-ttl;
+      padding: 20px 0;
+    }
+    &-subttl{
+      color: $c-orange;
+    }
+    &-txt{
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
+  &-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 45px;
+    margin: 20px 0;
+    background: $c-inverse;
+    border: 1px solid $c-border-inverse;
+    &-name{
+      padding-bottom: 10px;
+      font-family: $ttl-font;
+      font-weight: 600;
+      font-size: 24px;
+      color: $c-ttl;
+      text-align: center;
+    }
+    &-img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &-ttl{
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 5px;
+      font-size: 17px;
+    }
+  }
+  &-details{
+    &-cnt{
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 30px;
+    }
+    &-ttl{
+      font-family: $ttl-font;
+      font-size: 60px;
+      text-transform: uppercase;
+      margin: 30px 0;
+    }
+    &-subttl{
+      font-family: $ttl-font;
+      font-size: 36px;
+      padding-bottom: 15px;
+    }
+    &-download{
+      font-size: 24px;
+      font-family: $ttl-font;
+      font-weight: 600;
+    }
+    &-note{
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &-txt{
+      font-size: 17px;
+    }
+    &-l{
+      flex-basis: 320px;
+      flex-shrink: 0;
+      margin-right: 8%;
+    }
+  }
+  &-row{
+    @include make-row();
+    flex-wrap: wrap;
+    margin: 50px -15px;
+  }
+  &-col{
+    @include make-col(4);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+  }
+  &-card{
+    color: $c-txt;
+    font-size: 18px;
+    line-height: 1.2;
+    &-ttl{
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      color: $c-base;
+    }
+  }
+  &-lst{
+    margin-top: 10px;
+  }
+  &-i{
+    display: flex;
+    align-items: baseline;
+    padding: 5px 0;
+    &.__bold{
+      font-weight: 600;
+    }
+    &-l{
+      max-width: 90px;
+      width: 100%;
+      margin-right: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &-r{
+      font-size: 17px;
+    }
+  }
+  &-package{
+    &-ttl{
+      color: $c-txt;
+      font-weight: 600;
+      line-height: 1.1;
+      padding-top: 15px;
+    }
+    &-blk{
+      width: 100%;
+    }
+    &-cnt{
+      width: 100%;
+      margin-left: 10%;
+      line-height: 1.1;
+      padding-top: 10px;
+    }
+    &-img{
+      max-width: 225px;
+      width: 100%;
+      min-height: 320px;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &-name{
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+    &-t{
+      font-size: 24px;
+      padding-bottom: 15px;
+    }
+    &-b{
+      padding: 15px 0;
+    }
+    &-lnk{
+      color: $c-desc;
+      &:hover{
+        color: $c-desc-h;
+        text-decoration: underline;
+      }
+    }
+    &-count{
+      width: 100%;
+      padding-top: 10px;
+    }
+  }
+  &-download{
+    display: flex;
+    align-items: center;
+    color: $c-desc;
+    max-width: 105px;
+    width: 100%;
+    &:hover{
+      color: $c-desc-h;
+      .order-download-txt{
+        text-decoration: underline;
+      }
+    }
+    &-img{
+      margin-right: 5px;
+    }
+  }
+}
+//for flex-grow cells
+@for $i from 1 through 12 {
+  .u-Flex-grow-#{$i} {
+    flex-grow: $i;
+  }
+}
+.u-Flex-grow-1 {
+  text-align: right;
+}
+.mt-10{
+  margin-top: 10px;
+}
+@media screen and (max-width: 900px){
+  .order{
+    &-cnt{
+      &-txt{
+        font-size: 17px;
+      }
+    }
+    &-info{
+      padding: 10px 15px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      &-card{
+        padding: 10px;
+      }
+      &-img{
+        display: block;
+        margin: 0 auto;
+      }
+      &-ttl{
+        display: block;
+        margin: 10px auto 0;
+        text-align: center;
+      }
+    }
+    &-details{
+      &-txt{
+        margin-right: 0;
+      }
+      &-l{
+        margin-right: 3%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px){
+  .order{
+    &-details{
+      &-cnt{
+        flex-wrap: wrap;
+      }
+      &-r{
+        margin-top: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 680px) {
+  .order{
+    &-cnt{
+      &-ttl{
+        font-size: 40px;
+        padding: 0 0 10px;
+      }
+    }
+    &-message{
+      padding: 10px 15px;
+      &.__add-btn{
+        padding: 10px 15px 5px 15px;
+      }
+    }
+    &-details{
+      &-ttl {
+        font-size: 40px;
+        margin: 20px 0;
+      }
+      &-subttl {
+        font-size: 30px;
+      }
+      &-l{
+        margin-right: 0;
+        flex-shrink: unset;
+      }
+    }
+    &-i{
+      &-l{
+        max-width: 70px;
+      }
+      &-r{
+        line-height: 1.2;
+      }
+    }
+    &-price{
+      &-ttl{
+        font-size: 22px;
+        &.__L{
+          font-size: 40px;
+        }
+      }
+      &-b{
+        .order-price-tbl-row-i .text-right {
+          text-align: right;
+        }
+        .order-price-tbl-row-i.__pr {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

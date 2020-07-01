@@ -1,0 +1,64 @@
+//default black button
+.btn{
+	display: inline-block;
+	padding: 10px;
+	font-family: $ext-font;
+	color: #fff;
+	background: #000;
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.3s, color 0.2s;
+	&:hover{
+		background: #434c53;
+	}
+	&:active{
+		background: #272d31;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+
+
+.with-ic-inline{
+	&:after{
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 20px;
+	}
+}
+.btn-ic{
+	position: absolute;
+	right: 15px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+
+//decorate grey  button
+.btn-dec{
+	@extend .btn;
+	background: #e6e8e7;
+	color: #000;
+	&:hover{
+		color: #fff;
+		background:#6b767f;
+	}
+	&:active{
+		background: #272d31;
+	}
+}
+
+//inverse red button
+.btn-inverse{
+	@extend .btn;
+	background: #d01d42;
+	&:hover{
+		background: #f24f78;
+	}
+	&:active{
+		background: #bd0532;
+	}
+}

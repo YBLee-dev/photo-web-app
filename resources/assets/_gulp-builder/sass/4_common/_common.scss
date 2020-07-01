@@ -1,0 +1,30 @@
+@import 'sprite';
+@include sprites($spritesheet-sprites); //Use for sprites
+@import 'elements/elements';
+@import 'blocks/blocks';
+@import 'responsive'; 
+
+/*.hidden-xs{
+  display: flex!important;
+}*/
+
+.visible-xs{
+  display: none!important;
+}
+.hidden-md{
+  display: flex!important;
+}
+
+@media screen and (max-width: 1024px){
+  .hidden-md{
+    display: none!important;
+  }
+}
+@media screen and (max-width: 800px){
+  .hidden-xs{
+    display: none!important;
+  }
+  .visible-xs{
+    display: flex!important;
+  }
+}

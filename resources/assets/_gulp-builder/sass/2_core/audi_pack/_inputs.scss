@@ -1,0 +1,110 @@
+input{
+	display: block;
+	outline: 0;
+    -webkit-appearance: none;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+   	font-family: $base-font;
+    font-size: 16px;
+    color: $color-font-ttl;
+   	border: 1px solid  #434c53;
+	padding: 12px 20px;
+	transition: border-color 0.2s;
+	&:focus{
+		background: #ebebeb;
+	}
+    
+}
+label{
+	display: block;
+	cursor: pointer;
+	color: $color-font-subttl;
+	font-family: $ext-font;
+	font-size: 16px;
+	padding: 0 0 10px;
+}
+.error-lbl{
+	color: $color-error;
+	font-size: 12px;
+	padding: 5px 0 0;
+	
+}
+.inp-with-ic{
+	position: relative;
+	&-lbl{
+		background: #e7e9ea;
+	    position: absolute;
+	    top: 1px;
+	    bottom: 1px;
+	    left: 1px;
+	    width: 40px;
+
+	}
+	input{
+		border-color: #cbcbcb;
+		padding: 10px 15px 10px 55px;
+		font-size: 14px;
+		&:focus{
+			background: #f9f9f9;
+		}
+		&::-webkit-input-placeholder {
+    	font-family: $ext-font;
+    	color: $color-font-ttl;
+	    }
+		&::-moz-placeholder{
+			font-family: $ext-font;
+	    	color: $color-font-ttl;
+		}/* Firefox 19+ */
+		&:-moz-placeholder{
+			font-family: $ext-font;
+	    	color: $color-font-ttl;
+		}/* Firefox 18- */
+		&:-ms-input-placeholder{
+			font-family: $ext-font;
+	    	color: $color-font-ttl;
+		}
+	}
+}
+.inp-ic{
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.wrap-checkbox{
+	margin: 10px 0;	
+	input{
+		display: none;	
+		&:checked+label>.checked-ic:before{
+			
+		}
+	}
+	label{
+	    cursor: pointer;
+	    display: block;
+	    padding-left: 30px;
+	    font-size: 14px;	
+	    position: relative;
+	}
+    .checked-ic{
+	    display: block;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 16px;
+	    height: 16px;
+	    border: 1px solid #ccc;
+	    &:before{
+	    	content: '';
+			display: block;
+			position: absolute;
+			top: 0;	
+			bottom: 0;	
+			margin: auto;			
+	    }
+	}
+	
+}
